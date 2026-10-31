@@ -8,7 +8,7 @@ A library application built with **Oracle APEX** and **PL/SQL**. Members borrow 
 - **Books, members and loans:** interactive reports with forms, for administrators.
 - **Own loans:** normal users see only their own loans.
 - **Accounts:** self-service sign-up. The first account becomes the administrator.
-- **Works on phones:** on small screens the side menu opens over the page from the menu button.
+- **Responsive:** works on phones, tablets and desktops. On small screens the side menu opens over the page, page titles and reports fit the screen, and buttons and fields are sized for touch.
 - **Business rules in the database:** a copy is taken when a book is issued and returned when it is returned, a member can hold at most 5 books, suspended members cannot borrow, and fines are 0.50 per day late.
 
 ## Database
@@ -29,7 +29,7 @@ Passwords are never stored in plain text. Each one is stored as a salted hash.
 
 The APEX application uses a custom authentication scheme (`lms_auth_pkg.authenticate`) and an *Administration Rights* authorization scheme (`lms_auth_pkg.is_admin`). Administrator-only pages and menu items are protected by that scheme, and the database enforces the same rules.
 
-`apex/mobile-nav.css` makes the side menu open over the page on phones and tablets. It goes inside the `<style>` block on the Global Page (page 0).
+`apex/mobile-nav.css` holds the responsive fixes for phones and tablets. It goes inside the `<style>` block on the Global Page (page 0).
 
 ### First run
 
