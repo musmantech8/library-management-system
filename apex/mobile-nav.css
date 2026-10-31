@@ -1,6 +1,11 @@
 /* Responsive fixes for phones and tablets.
    Paste this inside the <style> block of the Global Page (page 0) region. */
 
+/* The Global Page region that holds this stylesheet sits in the page grid. Give it
+   Sequence 9999, Row CSS Classes "mu-style-row" and Column CSS Classes "mu-style-col",
+   so it renders last and takes no space; otherwise it pushes dashboard charts out of line. */
+.mu-style-row, .mu-style-col { display: none !important; }
+
 /* Phones and tablets: the side menu opens over the page instead of pushing it aside.
    When the menu pushed the page, APEX saw the page width change, treated it as a
    window resize and closed the menu straight away, so the menu button did nothing. */
