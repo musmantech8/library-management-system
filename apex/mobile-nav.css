@@ -1,0 +1,16 @@
+/* Phones and tablets: the side menu opens over the page instead of pushing it aside.
+   When the menu pushed the page, APEX saw the page width change, treated it as a
+   window resize and closed the menu straight away, so the menu button did nothing.
+   Paste this inside the <style> block of the Global Page (page 0) region. */
+@media (max-width: 991.98px) {
+  .t-PageBody--leftNav .t-Body-nav {
+    position: fixed !important;
+    top: 62px !important;   /* height of the app header */
+    left: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+    z-index: 850 !important;
+    overflow-y: auto;
+    box-shadow: 4px 0 18px rgba(15, 23, 42, .25);
+  }
+}
